@@ -1,8 +1,11 @@
+import getConfig from 'next/config'
+const { publicRuntimeConfig } = getConfig()
+
 const getAuth0 = options => {
   const auth0 = require('auth0-js')
   return new auth0.WebAuth({
-    clientID: process.env.AUTH0_CLIENT_ID,
-    domain: process.env.AUTH0_CLIENT_DOMAIN,
+    clientID: publicRuntimeConfig.AUTH0_CLIENT_ID,
+    domain: publicRuntimeConfig.AUTH0_CLIENT_DOMAIN,
   })
 }
 
