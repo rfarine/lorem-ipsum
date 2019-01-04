@@ -12,8 +12,8 @@ const LoremIpsum = ({ response, router: { query: { id } } }) => {
 }
 
 LoremIpsum.getInitialProps = async ({ req }) => {
-  const baseUrl = `http://${req.headers.host}/api/index`
-  const response = await fetch(baseUrl)
+  const url = `https://${req.headers.host}/api/lorem-ipsum`
+  const response = await fetch(url)
 
   return { response }
 }
