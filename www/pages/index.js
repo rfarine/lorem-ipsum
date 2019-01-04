@@ -19,6 +19,9 @@ const IndexPage = ({ isAuthenticated }) => (
         <Link href="/logout">
           <a>Go logout</a>
         </Link>
+        <Link href={`/lorem-ipsum?id=123`}>
+          <a>Lorem Ipsum #123</a>
+        </Link>
       </div>
     )}
     {!isAuthenticated && (
