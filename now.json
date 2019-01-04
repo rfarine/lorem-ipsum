@@ -1,7 +1,10 @@
 {
   "version": 2,
   "name": "lorem-ipsum",
-  "builds": [{ "src": "www/next.config.js", "use": "@now/next" }],
+  "builds": [
+    { "src": "www/next.config.js", "use": "@now/next" },
+    { "src": "api/*.js", "use": "@now/node" }
+  ],
   "routes": [
     { "src": "/api/(.*)", "dest": "/api/$1" },
     { "src": "/(.*)", "dest": "/www/$1" }
